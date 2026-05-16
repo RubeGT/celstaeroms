@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ROM Vault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>The ROM Vault</h1>
+        <p>Your ultimate archive for classic console games. Powered by Vercel.</p>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <input type="text" id="searchBar" placeholder="Search for a game...">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-console="all">All Consoles</button>
+                <button class="filter-btn" data-console="wii">Wii</button>
+                <button class="filter-btn" data-console="3ds">Nintendo 3DS</button>
+            </div>
+        </div>
+
+        <main class="games-grid" id="gamesGrid">
+            <div class="game-card" data-console="wii" data-name="mario kart wii">
+                <div class="console-badge wii-badge">Wii</div>
+                <h3>Mario Kart Wii</h3>
+                <p class="game-id">ID: <code>RMAE01</code></p>
+                <button class="download-zip-btn" 
+                        data-source-url="https://raw.githubusercontent.com/manrajgrover/py-gtfs-parser/master/LICENSE" 
+                        data-folder-structure="RMAE01"
+                        data-filename="RMAE01.wbfs"
+                        data-zipname="Mario_Kart_Wii_RMAE01.zip">
+                    Download Configured ZIP
+                </button>
+            </div>
+
+            <div class="game-card" data-console="3ds" data-name="mario kart 7">
+                <div class="console-badge threedis-badge">3DS</div>
+                <h3>Mario Kart 7</h3>
+                <p class="game-id">Format: .3ds</p>
+                <button class="download-zip-btn" 
+                        data-source-url="https://raw.githubusercontent.com/manrajgrover/py-gtfs-parser/master/LICENSE" 
+                        data-folder-structure=""
+                        data-filename="Mario Kart 7.3ds"
+                        data-zipname="Mario_Kart_7_3DS.zip">
+                    Download Configured ZIP
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
